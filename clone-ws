@@ -4,7 +4,7 @@ echo $ 'cloning Workspace \n'
 echo $ 'folder: ~/plattform-ros \n'
 echo $ 'source: https://github.com/HMlabh/plattform-ros \n'
 
-if [test -d ~/plattform-ros]
+if [ -d ~/plattform-ros ]
   then
     echo $ 'ERROR: Folder existing'
   else
