@@ -6,10 +6,10 @@ echo -e "\e[34msource: https://github.com/HMlabh/plattform-ros\e[0m"
 
 if [ -d ~/plattform-ros ]
   then
-    echo -e "\e[31ERROR: Folder existing\e[0m"
+    echo -e "\e[31mERROR: Folder existing\e[0m"
   else
     git clone https://github.com/HMlabh/plattform-ros ~/plattform-ros
-    echo -e "\e[32cloning complete\e[0m"
+    echo -e "\e[32mcloning complete\e[0m"
 fi
  
 
