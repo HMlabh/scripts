@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo $ 'cloning Workspace \n'
+echo $ 'folder: ~/plattform-ros \n'
+echo $ 'source: https://github.com/HMlabh/plattform-ros \n'
+
+if [test -d ~/plattform-ros]
+  then
+    echo $ 'ERROR: Folder existing'
+  else
+    git clone https://github.com/HMlabh/plattform-ros ~/plattform-ros
+    echo $ 'cloning complete\n'
+fi
+ 
+
+
+exit 0
