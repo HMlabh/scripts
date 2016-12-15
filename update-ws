@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo 'updating Workspace'
+echo 'folder: ~/plattform-ros'
+echo 'source: https://github.com/HMlabh/plattform-ros'
+
+if [ -d ~/plattform-ros ]
+  then
+    cd ~/plattform-ros
+    
+    echo 'deleting changes'
+    git stash
+    git stash drop
+
+    echo 'pulling...'
+    git pull
+
+    
+    echo 'update complete'
+  else
+    echo 'ERROR Folder not existing'
+fi
+ 
+
+
+exit 0
