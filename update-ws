@@ -9,6 +9,7 @@ if [ -d ~/plattform-ros ]
     cd ~/plattform-ros
     
     echo 'deleting changes'
+    git add *
     git stash
     git stash drop
 
