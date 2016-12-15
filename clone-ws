@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "\ecloning Workspace\e[0m"
-echo -e "\efolder: ~/plattform-ros\e[0m"
-echo -e "\esource: https://github.com/HMlabh/plattform-ros\e[0m"
+echo -e "\e[34mcloning Workspace\e[0m"
+echo -e "\e[34mfolder: ~/plattform-ros\e[0m"
+echo -e "\e[34msource: https://github.com/HMlabh/plattform-ros\e[0m"
 
 if [ -d ~/plattform-ros ]
   then
