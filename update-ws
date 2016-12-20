@@ -8,12 +8,12 @@ if [ -d ~/plattform-ros ]
   then
     cd ~/plattform-ros
     
-    echo "deleting changes"
+    echo "\e[34mdeleting changes\e[0m"
     git add *
     git stash
     git stash drop
 
-    echo "pulling..."
+    echo "\e[34mpulling...\e[0m"
     git pull
 
     
