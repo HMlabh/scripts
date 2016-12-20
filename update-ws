@@ -4,6 +4,7 @@ echo -e "\e[34mupdating Workspace\e[0m"
 echo -e "\e[34mfolder: ~/plattform-ros\e[0m"
 echo -e "\e[34msource: https://github.com/HMlabh/plattform-ros\e[0m"
 
+#################git##################
 if [ -d ~/plattform-ros ]
   then
     cd ~/plattform-ros
@@ -21,7 +22,13 @@ if [ -d ~/plattform-ros ]
   else
     echo -e "\e[31mERROR Folder not existing\e[0m"
 fi
- 
 
+################ ros ###################
+echo -e "\e[34msourcing Setup.bash\e[0m"
+source ~/plattform-ros/devel/setup.bash
+
+echo -e "\e[34mcompiling...\e[0m"
+cd ~/plattform-ros
+catkin_make
 
 exit 0
