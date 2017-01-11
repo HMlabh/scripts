@@ -1,0 +1,62 @@
+###################################################################################
+tutorial for setup and operating Ubuntu Server on a Raspberry Pi3
+###################################################################################
+
+Image:
+https://wiki.ubuntu.com/ARM/RaspberryPi
+auf SD-Karte schreiben (z.b. mit Win32DiskImager)
+
+###################################################################################
+Login: ubuntu
+Passwort: ubuntu
+###################################################################################
+
+Fehler: Start Network interfaces
+->  Timeout auf 10 sekunden stellen
+sudo vi /etc/systemd/system/network-online.targets.wants/networking.service
+
+Änderung:
+21:TimeoutStartSec=5min   ->   21:TimeoutStartSec=10s
+
+###################################################################################
+
+Netzwerk konfigurieren
+Remapping mit Interfaces [https://wiki.ubuntuusers.de/interfaces/]
+sudo vi /etc/network/interfaces
+
+Eintrag hinzufügen:
+
+auto eth0
+iface eth0 inet static
+address 192.168.27.229
+netmask 255.255.0.0
+gateway 192.168.27.254
+dns-nameservers 192.168.27.253
+
+Aktivierung:
+sudo /etc/init.d/networking restart
+
+Neustart erforderlich
+
+Fehler: sudo: unable to resolve host ubuntu:
+schreibe in Datei:
+sudo vi /etc/hostname
+"ubuntu"
+sudo vi /etc/hosts
+"127.0.1.1 ubuntu"
+
+
+####################################################################################
+Font ändern:
+sudo dpkg-reconfigure console-setup
+
+####################################################################################
+Tastaturlayout ändern
+sudo dpkg-reconfigure keyboard-configuration
+
+######################################################################################
+Erstes Update:
+sudo apt-get update
+sudo apt-get upgrade
+!!!!!!!!!!!!!!!!!!NIE: sudo apt-get dist-upgrade !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
