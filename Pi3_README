@@ -28,7 +28,7 @@ Eintrag hinzufügen:
 
 auto eth0
 iface eth0 inet static
-address 192.168.27.229
+address 192.168.27.222
 netmask 255.255.0.0
 gateway 192.168.27.254
 dns-nameservers 192.168.27.253
@@ -59,4 +59,27 @@ Erstes Update:
 sudo apt-get update
 sudo apt-get upgrade
 !!!!!!!!!!!!!!!!!!NIE: sudo apt-get dist-upgrade !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+erneutes zurücksetzen des Timers!!
+Neustart
 
+
+#####################################################################################
+neuen Benutzer anlegen:
+sudo adduser labh
+
+neuem Benutzer root-rechte geben:
+sudo usermod -aG sudo labh
+
+#####################################################################################
+plymouth themes
+plymouth packages
+
+
+#####################################################################################
+Ros source bei Startup einstellen
+Per Eintrag in rc.local:
+sudo vim /etc/rc.local
+hinzufügen:
+source /home/labh/plattform-ros/devel/setup.bash
+
+####################################################################################
