@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo $'t-> restarting Network::\n'
+/etc/init.d/networking restart
+
+echo $'t-> pinging google:\n'
+ping www.google.de -c 3
+
+exit 0
