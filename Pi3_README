@@ -76,10 +76,3 @@ plymouth packages
 
 
 #####################################################################################
-Ros source bei Startup einstellen
-Per Eintrag in rc.local:
-sudo vim /etc/rc.local
-hinzufügen:
-source /home/labh/plattform-ros/devel/setup.bash
-
-####################################################################################
