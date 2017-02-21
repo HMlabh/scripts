@@ -38,5 +38,10 @@ Font ändern:
 sudo dpkg-reconfigure console-setup
 #############################################
 
-neuer User:
+neuen Benutzer anlegen:
+sudo adduser labh
 
+neuem Benutzer root-rechte geben:
+sudo usermod -aG sudo labh
+
+##############################################
