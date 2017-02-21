@@ -1,0 +1,42 @@
+######Raspian installation###############
+Image:
+https://www.raspberrypi.org/downloads/raspbian/
+###############################################
+User : pi
+Pass : rasperry
+(englische Tastatur!!!!!)
+
+raspi-config -> tastaturlayout
+
+###########################################
+
+Netzwerk konfigurieren
+Remapping mit Interfaces [https://wiki.ubuntuusers.de/interfaces/]
+sudo vi /etc/network/interfaces
+
+Eintrag hinzufügen:
+
+auto eth0
+iface eth0 inet static
+address 192.168.27.222
+netmask 255.255.0.0
+gateway 192.168.27.254
+dns-nameservers 192.168.27.253
+
+Aktivierung:
+sudo /etc/init.d/networking restart
+
+Neustart erforderlich
+
+#################################################
+
+sudo apt-get update
+udo apt-get upgrade
+
+###########################################
+Font ändern:
+sudo dpkg-reconfigure console-setup
+#############################################
+
+neuer User:
+
